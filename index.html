@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinLunar - 3D Moon Coin</title>
+    <meta name="description" content="Interactúa con la moneda 3D de Piedra Luna. Gira la moneda para ver cara o sello.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header id="main-header">
+        <div class="logo">COIN<span>LUNAR</span></div>
+        <nav>
+            <ul>
+                <li><a href="#about">Acerca</a></li>
+                <li><a href="#collection">Colección</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="app-container">
+        <section class="hero">
+            <div class="content">
+                <h1>1.0 Piedra Luna</h1>
+                <p>Usa tu ratón o dedo para girar la moneda y descubrir el destino.</p>
+            </div>
+            <div id="coin-canvas-container">
+                <!-- Three.js Canvas will be injected here -->
+                <div class="loader-container" id="loader">
+                    <div class="loader"></div>
+                    <p>Cargando Luna...</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="toss-button">Lanzar Moneda</button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 CoinLunar. Desarrollado con energía lunar.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="coin.js"></script>
+</body>
+</html>
